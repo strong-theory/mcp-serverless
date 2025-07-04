@@ -9,3 +9,13 @@ output "policy_arn" {
 output "role_arn" {
   value = aws_iam_role.this.arn
 }
+
+output "stage_url" {
+  description = "Stage url"
+  value       = aws_apigatewayv2_stage.this.invoke_url
+}
+
+output "mcp_url" {
+  description = "Stage url"
+  value       = "${aws_apigatewayv2_stage.this.invoke_url}/mcp"
+}

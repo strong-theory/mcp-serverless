@@ -6,9 +6,9 @@ locals {
 module "package_with_commands_and_patterns" {
   source = "terraform-aws-modules/lambda/aws"
 
-  layer_name = "${var.function_name}-requirements-layer"
+  layer_name      = "${var.function_name}-requirements-layer"
   create_function = false
-  create_layer = true
+  create_layer    = true
 
   runtime = local.runtime
   source_path = [
@@ -57,8 +57,8 @@ module "lambda_function" {
 
 
   tags = {
-    Name     = var.function_name
+    Name = var.function_name
   }
 
-  depends_on = [aws_iam_role.this, module.package_with_commands_and_patterns ]
+  depends_on = [aws_iam_role.this, module.package_with_commands_and_patterns]
 }
