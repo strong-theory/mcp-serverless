@@ -1,6 +1,9 @@
 # mcp-serverless
-MCP Server usando arquitetura serverless da AWS
+MCP Server de clima usando arquitetura serverless da AWS.
 
+### Arquitetura
+
+![](diagram.png)
 
 ### Deploy com terraform
 
